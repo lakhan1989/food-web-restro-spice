@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+    <div style=" display:flex;">
+        {% for x in post %}
+       <div class="card" style="width: 18rem; padding: 20px; margin: 10px;">
+           <a href="{% url 'blogpost' x.id %}"><img src="{{ x.featured_image.url  }}" class="card-img-top" alt="..."></a>
+           <div class="card-body">
+             <h5 class="card-title">{{ x.post_title}}</h5>
+             <p class="card-text">{{ x.description}}</p>
+           </div>
+           <ul class="list-group list-group-flush">
+             <li class="list-group-item">{{ x.content }}</li>
+             <li class="list-group-item">{{ x.author}}</li>
+             {% for y in x.comments.all %}
+             <li class="list-group-item">{{ y.comment }}</li>
+             {% endfor %}
+   
+            
+           </ul>
+         </div>
+         {% endfor %}
+       </div>
+
+    
+       <div style=" display:flex;">
+        {% for x in category %}
+       <div class="card" style="width: 18rem; padding: 20px; margin: 10px;">
+           <img src="{{ x.image.url }}" class="card-img-top" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">{{ x.name}}</h5>
+             <p class="card-text">{{ x.description}}</p>
+           </div>
+           <ul class="list-group list-group-flush">
+             <li class="list-group-item">{{ x.price }}</li>
+             <li class="list-group-item">{{ x.category}}</li>
+   
+             {% if x.available %}
+             <li class="list-group-item">Available</li>
+             {% else %}
+             <li class="list-group-item"> Currently Not Available</li>
+             {% endif %}
+           </ul>
+         </div>
+         {% endfor %}
+       </div>
+
+
+
+       
+       <div style=" display:flex;">
+        {% for x in bakery %}
+       <div class="card" style="width: 18rem; padding: 20px; margin: 10px;">
+           <img src="{{ x.image.url }}" class="card-img-top" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">{{ x.name}}</h5>
+             <p class="card-text">{{ x.description}}</p>
+           </div>
+           <ul class="list-group list-group-flush">
+             <li class="list-group-item">{{ x.price }}</li>
+             <li class="list-group-item">{{ x.category}}</li>
+   
+             {% if x.available %}
+             <li class="list-group-item">Available</li>
+             {% else %}
+             <li class="list-group-item"> Currently Not Available</li>
+             {% endif %}
+           </ul>
+         </div>
+         {% endfor %}
+       </div>
+
+
+       <div style=" display:flex;">
+        {% for x in teas %}
+       <div class="card" style="width: 18rem; padding: 20px; margin: 10px;">
+           <img src="{{ x.image.url }}" class="card-img-top" alt="...">
+           <div class="card-body">
+             <h5 class="card-title">{{ x.name}}</h5>
+             <p class="card-text">{{ x.description}}</p>
+           </div>
+           <ul class="list-group list-group-flush">
+             <li class="list-group-item">{{ x.price }}</li>
+             <li class="list-group-item">{{ x.category}}</li>
+   
+             {% if x.available %}
+             <li class="list-group-item">Available</li>
+             {% else %}
+             <li class="list-group-item"> Currently Not Available</li>
+             {% endif %}
+           </ul>
+         </div>
+         {% endfor %}
+       </div>
+
+</body>
+</html>

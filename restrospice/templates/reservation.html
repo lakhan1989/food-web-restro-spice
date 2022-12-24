@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Reservation{% endblock %}
+{% block body %}
+
+
+{% block css %}
+{% endblock %}
+ 
+
+   
+        <p class="our-menu-para">
+            RESERVATION</p> 
+    
+          <div class="booktable-wrap">
+            <div class="booktable-mainsec">
+              <p class="p-online-reservation">ONLINE RESERVATION</p>
+              <h1 class="h1-book-a-table">Book A Table</h1>
+              <p class="closed-sunday">Closed Sunday night, Mondays & Tuesdays. Due to the vast amount of no-shows, all bookings must now be secured with a credit card which will be charged $20 if you do not show up for your booking.</p>
+            </div>
+
+            <form method="POST">
+              {% csrf_token %}
+              <div class="booktable-gird">
+                  <div style="width: 90%;">
+                       
+                    {{ reservation_form.persons }}
+                  </div>
+                  <div style="width: 90%;"> 
+                    {{ reservation_form.date }}
+                  </div>
+                  <div style="width: 90%;">
+                      
+                      {{ reservation_form.time }} 
+                  </div>
+                  <div style="width: 90%;"> 
+                      {{ reservation_form.name }}
+                  </div> 
+                  <div style="width: 90%;"> 
+                    {{ reservation_form.email }}
+                  </div>
+                  <div style="width: 90%;"> 
+                      {{ reservation_form.phone }}
+                  </div>
+              </div>
+
+               {{ reservation_form.comment }}  
+
+             <div class="book-btn">
+              <button class="booktable-btn">BOOK A TABLE NOW</button>
+             </div>
+          </div>
+        </form>
+
+{% endblock %}

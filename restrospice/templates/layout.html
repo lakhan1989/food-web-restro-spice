@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    
+    
+    
+    <link rel="stylesheet" href="{% static 'blogpost.css' %}" />
+    <link rel="stylesheet" href="{% static './header.css' %}">
+    <link rel="stylesheet" href="{% static 'ourmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'contact-us.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'reservation.css' %}">
+    
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
+
+
+</head>
+
+<body>
+
+
+
+     <!-- nav section -->
+     <div class="ourmain-main-div">
+        <div class="ourmenu-heder-para-flex">
+          <span class="material-symbols-outlined">
+            <span class="header-mail-icon"> location_on </span>
+          </span>
+          <p class="header-silk">BJNR, Ajmer, Jaipur, INDIA</p>
+          <div class="mail-para-flex">
+            <span class="material-symbols-outlined">
+              <span class="header-mail-icon"> mail</span>
+            </span>
+            <p class="header-booking">luckchhipa1989@gmail.com</p>
+          </div>
+        </div>
+        <div class="ourmenu-heder-para-flex">
+          <div class="budhi">
+            <span class="material-symbols-outlined phone-icon">
+              <span class="telephone"> phone_enabled</span>
+            </span>
+            <p class="header-silk">+918114460310</p>
+            <div class="fa-brands">
+              <i class="fa-brands fa-facebook-f fb-icon social-media-icons"></i>
+              <i class="fa-brands fa-twitter fb-icon social-media-icons"></i>
+              <i class="fa-brands fa-instagram fb-icon social-media-icons"></i>
+              <i class="fa-brands fa-pinterest fb-icon social-media-icons"></i>
+              <i class="fa-brands fa-youtube fb-icon social-media-icons"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- nav section -->
+      <!-- nav-header -->
+      <div>
+        <div class="main-div-nav2">
+          <img
+            class="our-banner-img"
+            src="{% static 'photos/bundo-kim-y6dGNZaDu4w-unsplash.jpg' %}"
+            alt=""
+          />
+        </div>
+        <div class="our-nav2">
+          <img class="pt-logo" src="{% static 'photos/pt-logo.png' %}" alt="" />
+          <div class="nav2-flex">
+            <div class="our-anchor">
+              <a class="anchor-hover" href="{% url 'home' %}">HOME</a> 
+              <a class="anchor-hover" href="{% url 'menu' %}">OUR MENU</a>
+              <a class="anchor-hover" href="{% url 'reservation' %}">RESERVATION</a>
+              <a class="anchor-hover" href="{% url 'contactus' %}">CONTACT</a>
+              <a class="anchor-hover" href="#">NEWS</a>
+            </div>
+          </div>
+          <div class="div-reservation">
+            <button class="our-btn">
+              <span class="reservation">RESERVATION</span>
+            </button>
+          </div>
+        </div>
+         
+      </div>
+      <!-- nav-header -->
+
+
+{% block body %}
+
+{% endblock %}
+
+
+<div class="contact-us-form">
+    <div class="black-containt">
+        <div class="contact-us-wrap">
+            <div class="three-div-space">
+                <div class="main-visitus-div visit-margin"></div>
+                <div class="two-div-space">
+                    <p class="contactus-main-p ">VISIT US FOR GOOD COFFEE & FOOD</p>
+                </div>
+                <div class="main-visitus-div visit-margin"></div>
+            </div>
+
+            <h4 class="waiting-for">Waiting For You Every Day</h4>
+            <p class="ifyouwould-p">If you would like to stay connected and be the first to know about our news,
+                events, and exclusive offers, please sign up for our newsletter. You can opt out at any time by
+                clicking unsubscribe on the newsletter.</p>
+                <div class="contact-email-div">
+                    <input class="contact-email-input" type="email" placeholder="Your Email Address"><button class="contact-submit-button"
+                type="submit"><span class="material-symbols-outlined">
+                    arrow_right_alt
+                </span></button>
+                </div>
+            <div class="checkbox-main-div">
+                <input type="checkbox">
+                <div class="checkbox-main-anchor">
+                    <p class="contactus-iagree-p">I agree to the</p>
+                    <a class="privacy-anchor" href="">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+     </div>
+</div>
+</div>
+<!-- footer section -->
+<div class="footer-wrap">
+    <div class="main-footer">
+        <a class="icon-anchor" href="https://www.facebook.com/"><i
+                class="fa-brands fa-facebook-f footer-icon"></i></a>
+        <a class="icon-anchor" href="https://twitter.com/"><i class="fa-brands fa-twitter footer-icon"></i></a>
+        <a class="icon-anchor" href="https://www.instagram.com/"><i
+                class="fa-brands fa-instagram footer-icon"></i></a>
+        <a class="icon-anchor" href="https://in.pinterest.com/"><i
+                class="fa-brands fa-pinterest footer-icon"></i></a>
+        <a class="icon-anchor" href="https://www.youtube.com/"><i class="fa-brands fa-youtube footer-icon"></i></a>
+    </div>
+    <p class="footer-section-p">BJNR, Ajmer, Jaipur, INDIA – 8114 46 03 10 – luckchhipa1989@gmail.com</p>
+    <p class="footer-section-p">© Copyright PatioTime WordPress Theme</p>
+</div>
+
+
+{% block js %}{% endblock %}

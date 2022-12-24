@@ -1,0 +1,366 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+/* main-section */
+
+.main-section-div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.leave-reply-h3{
+    font-family: Cormorant Garamond, serif; 
+    font-weight: 600;
+    font-size: 30px;
+}
+.your-email{
+    color: #363636;
+}
+.post-coment-div{
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+.jamie-milson-maindiv{
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 35px;
+}
+.jamie-milson-wrap{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    column-gap: 20px;
+}
+.leave-input-type{
+    display: flex;
+    width: 100%;
+}
+.savename-checkbox{
+    display: flex;
+}
+.jamie-flower-picture{
+    height: 150px;
+    width: 150px;
+}
+.post-coment-button{
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  background-color: #c59764;
+  padding: 13px 40px;  
+  font-family:jost, sans-serif ;
+}
+.wonderful-eating-hr{
+    border:0.5px black solid ;
+    overflow: hidden;
+    background-color: black;
+}
+.reply-input{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: 0.3s;
+}
+.reply-input:focus{
+    border-bottom: 1px solid black;
+}
+.input{
+    margin: 10px;
+}
+.jamie-p{
+    letter-spacing: 2px;
+    line-height: 1.6;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1.66;
+}
+.our-mission-p{
+    font-size: 16px;
+    font-family: jost, sans-serif;
+    line-height: 1.6;
+   
+}
+.icon-anchor{
+    color: black;
+}
+.margin-div{
+    margin-top: 50px;
+}
+.wonderful-maindiv{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 30px;
+   
+}
+.next-post{    
+    display: flex; 
+    align-items: center;
+}
+.wonderful-anchor{
+    text-decoration: none;
+    color: #363636;
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+.wonderful-eating-a{
+    text-decoration: none;
+    color: #363636;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    transition: 0.2s;
+}
+.wonderful-eating-a:hover{
+    color: #666;
+}
+.jamile-milson-a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.rty{
+    margin: auto;
+    width: 80%;
+}
+.icon-margin{
+    margin: 8px;
+}
+.news-img{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    object-fit: cover;
+}  
+.latest-news-sec{
+    display: flex;
+    align-items: center;
+}  
+.latest-news-anchor{
+    text-decoration: none;
+    color: #c59764;
+}
+.latest-news-p{
+    transition: 0.3s;
+    font-family:Cormorant Garamond, serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.latest-news-p:hover{
+    color:#c59764 ;
+}
+.latest-news-date{
+    color:#363636;
+    font-size: 12px;
+}
+.this-elegant{
+    font-family: cormorant Garamond,serif;
+    font-size: 28px;
+}
+.first-sec-hr1{
+    border: 1px dotted rgb(206, 201, 201);
+    margin-top: 60px;
+}
+.opening-hours-div{
+    display: flex;
+    justify-content: space-between;
+}
+.black-containt{
+    background-color: rgba(0, 0, 0, 0.536);
+}
+.checkbox-main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox-main-anchor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.privacy-anchor{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 14px;
+    margin: 2px;
+}
+.contactus-iagree-p{
+    color: white;
+}
+.privacy-anchor:hover{
+    color: #c59764;
+}
+.mission-hedding{
+    font-size: 14px;
+    margin-top: 0;
+}
+.margin{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.aenean{
+    letter-spacing: 2px;
+    color: #363636;
+    line-height: 1.66;
+}
+.contact-us-form{
+    background-image: url("./photos/coffee-bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.waiting-for{
+    color: #f9f9f9;
+    font-size:4.125rem;
+    font-family:Cormorant Garamond, serif;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contact-us-wrap{
+    width: 60%;
+    margin: auto;
+    padding: 10%; 
+}
+.ifyouwould-p{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.contact-email-input{
+    width: 100%;
+    height: 42px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+}
+ 
+.contact-submit-button{
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+}
+.contact-email-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid white;
+    width: 65%;
+    margin: auto;
+}
+.contactus-main-p{
+    color: white;
+    font-size: 18px;
+    font-family:jost, sans-serif;
+    font-weight: 600;
+}
+/* footer section */
+.footer-icon{
+    font-size: 30px;
+    color: white;
+    margin: 12px;
+}
+.main-visitus-div{
+    width: 8%;
+    border: 0.2px solid white;
+    
+}
+.two-div-space{
+    display: flex;
+    align-items: center;
+    margin: px;
+}
+.icon-margin-facebook{
+    color: #3b5998;
+    border: 0.5px solid rgba(229, 222, 222, 0.342);
+    border-radius: 50%;
+    padding: 1%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.icon-margin-facebook:hover{
+    color: white;
+    background-color: #3b5998;
+}
+.icon-margin-twitter{
+    color: #1da1f2;
+    border: 0.5px solid rgba(229, 222, 222, 0.342);
+    border-radius: 50%;
+    padding: 1%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.icon-margin-twitter:hover{
+    color: white;
+    background-color: #1da1f2;
+}
+.icon-margin-pinterest{
+    color:  #bd081c;
+    border: 0.5px solid rgba(229, 222, 222, 0.342);
+    border-radius: 50%;
+    padding: 1%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.icon-margin-pinterest:hover{
+    color: white;
+    background-color: #bd081c;
+}
+
+.visit-margin{
+    margin: 28px;
+}
+.three-div-space{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.icon-color-div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.main-footer{
+    justify-content: center;
+    display: flex;
+}
+.footer-wrap{
+    background-color: black;
+    padding: 60px;
+}
+.footer-section-p{
+    color: white;
+    text-align: center;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+

@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Contact-us{% endblock %}
+{% block body %}
+
+
+{% block css %}
+
+{% endblock %}
+
+<p class="our-menu-para">
+    CONTACT US</p> 
+
+<div class="contact-us-main-grid">
+    <!-- grid first section     -->
+    <div class="our-loc-sec-margin">
+        <div class="speacker">
+            <p class="our-location">OUR LOCATION</p>
+            <div class="border-style-our-location"></div>
+        </div>
+
+        <p class="contact-where-to-find-us">WHERE TO FIND US </p>
+        <p class="the-patio-p">The Patio Time Cafe is located on Silk Street, in the heart of London city, on the edge
+            of Soho. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+            felis, ultricies nec.</p>
+        <!-- first-grid-sec-location -->
+        <div>
+            <div class="call-main-div">
+                <span class="material-symbols-outlined location-a">
+                    location_on
+                </span>
+                <a class="call-anchor"
+                    href="https://www.google.com/maps/place/Barbican+Centre/@51.5205487,-0.0936463,18z/data=!4m13!1m7!3m6!1s0x48761ca98744377d:0x9e296ec2b218ce78!2sSilk+St,+London,+UK!3b1!8m2!3d51.5198778!4d-0.0916239!3m4!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864">Silk
+                    St, Barbican, London EC2Y 8DS, UK</a>
+            </div>
+            <div class="call-main-div">
+                <span class="material-symbols-outlined">
+                    phone_enabled
+                </span>
+                <a class="call-anchor" href="callto:+39-055-123456">+39-055-123456</a>
+            </div>
+            <div class="call-main-div">
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+                <a class="call-anchor" href="">booking@patiotime.com</a>
+            </div>
+
+        </div>
+        <div>
+            <button class="view-google-map">VIEW IN GOOGLE MAPS </button>
+        </div>
+    </div>
+    <!-- grid second section -->
+    <div>
+        <img class="second-div-grid-img" src="{% static './photos/christoffer-engstrom-h0iw5llykTs-unsplash-1.jpg' %}"
+            alt="">
+    </div>
+</div>
+
+
+
+<div class="contact-us-background">
+    <div class="opening-hours-main-grid">
+        <div>
+            <div class="speacker">
+                <p class="our-location">GET IN</p>
+                <div class="border-style-our-location"></div>
+            </div>
+            <!-- <p class="getin-touch-p">GET IN TOUCH</p> -->
+            <h5 class="contact-us-h5">CONTACT US </h5>
+            <p class="touch-p">For general enquiries please email: info@patiotime.com</p>
+            <p class="touch-p">Reserve by email: booking@patiotime.com</p>
+            <p class="touch-p">Tel: +39 055 1234567</p>
+            <div>
+                <p class="opening-h5"><strong>OPENING HOURS:</strong></p>
+                <p class="touch-p">Mon – Thu: 10.00 am – 01:00 am</p>
+                <p class="touch-p">Fri – Sun: 10:00 am – 02:00 am</p>
+            </div>
+
+            <a class="touch-p" href="">ONLINE RESERVATION</a>
+            <div class="reservation-underline"></div>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <div class="your-name-div">
+                    <div style="width: 45%;">
+                        <p>Your name</p>
+                        {{ contactus_form.name }}
+                    </div>
+                    <div style="width: 45%;">
+                        <p>Your email</p>
+
+                        {{ contactus_form.email }}
+                    </div>
+                </div>
+                <p>Subject</p>
+                {{ contactus_form.subjects }}
+                <p>Your message (optional)</p>
+                {% for eror in contactus_form.massage.errors %}
+                <div class="alert alert-danger alert-dismissible" role="alert">{{ eror }}</div>
+                {% endfor %}
+                {{ contactus_form.massage }}
+ 
+                <button class="contact-us-button" type="submit">Submit</button>
+             
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

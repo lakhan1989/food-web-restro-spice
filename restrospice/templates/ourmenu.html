@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Menu{% endblock %}
+{% block body %}
+
+
+{% block css %}
+{% endblock %}
+
+
+
+ 
+<p class="our-menu-para">OUR MENU</p>    
+
+
+
+<div class="our-menu-main-div1">
+  <div class="budhiloveanu vr-style">
+    <div class="three-style">
+      <div class="twoborderclip">
+        <div class="border-div-style"></div>
+        <div class="three-style2">
+          <p class="best-drinking">BEST DRINKS</p>
+        </div>
+        <div class="border-div-style2"></div>
+      </div>
+
+      <div>
+        <h1 classs="coffees">COFFEES & TEAS</h1>
+      </div>
+    </div>
+
+    {% for x in tea %}
+    <div class="our-in-div menu-all-div-padding">
+      <img class="our-grid-allimg" src="{{ x.image.url }}" alt="" />
+      <div class="menu-wrapper">
+        <div class="our-in-div">
+          <h3 class="marbled-head menu-para-margin">{{ x.name}}</h3>
+          {% if x.available %}
+          <p><span class="seasonal menu-para-margin">Available</span></p>
+          {% else %}
+          <p><span class="seasonal menu-para-margin">Unavailable</span></p>
+          {% endif %}
+          <div class="two-div-border-style menu-para-margin"></div>
+          <p class="menu-para-margin">{{ x.price }}</p>
+        </div>
+        <p class="menu-para-margin condensed">{{ x.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+
+  </div>
+
+  <!-- menu second grid -->
+
+  <div class="menusecgrid">
+    <div class="three-style">
+      <div class="twoborderclip">
+        <div class="border-div-style"></div>
+        <div class="three-style2">
+          <p class="best-drinking">BEST BREACKFAST</p>
+        </div>
+        <div class="border-div-style2"></div>
+      </div>
+
+      <div>
+        <h1 classs="coffees">LUNCH & BAKERY</h1>
+      </div>
+    </div>
+
+    {% for x in bakery %}
+    <div class="our-in-div menu-all-div-padding">
+      <img class="our-grid-allimg" src="{{ x.image.url }}" alt="" />
+      <div class="menu-wrapper">
+        <div class="our-in-div">
+          <h3 class="marbled-head menu-para-margin">{{ x.name}}</h3>
+          {% if x.available %}
+          <p><span class="seasonal menu-para-margin">Available</span></p>
+          {% else %}
+          <p><span class="seasonal menu-para-margin">Unavailable</span></p>
+          {% endif %}
+          <div class="two-div-border-style menu-para-margin"></div>
+          <p class="menu-para-margin price">{{ x.price }}</p>
+        </div>
+        <p class="menu-para-margin condensed">{{ x.description}}</p>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+
+<!-- grid2-section -->
+<h1 class="all-day-brunch">ALL DAY BRUNCH</h1>
+ 
+<div class="main-grid2-section">
+
+  {% for x in lunch %}
+  <div class="menu-grid2">
+    <img class="our-grid2-img-style" src="{{ x.image.url }}" alt="">
+    <div class="grid2-in-div">
+      <p class="spaghetti-para">{{ x.name }}</p>
+      <p class="twenty-nine-para">{{ x.price }}</p>
+    </div>
+    <p class="grid-div-para">{{ x.description }}</p>
+  </div>
+  {% endfor %}
+
+</div>
+<!-- grid3 -->
+
+{% endblock %}

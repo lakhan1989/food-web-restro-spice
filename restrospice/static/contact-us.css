@@ -1,0 +1,202 @@
+body{
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+}
+.opening-hours-main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    grid-gap: 50px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.call-main-div{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.our-loc-sec-margin{
+    margin-top: 140px;
+}
+.contact-us-main-grid{
+    width: 80%;
+    
+    margin: auto;
+    grid-gap: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 160px;
+}
+.our-location{
+    color: #c59764;
+    font-weight: 600;
+    font-family: jost,sans-serif;
+    margin-bottom: 15px;
+}
+.contact-us-h5{
+    line-height:1;
+    font-size: 36px;
+    font-weight: 600;
+    font-size: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.opening-h5{
+    font-family:jost,sans-serif;
+    color:#363636 ;
+    line-height: 1.66;
+    font-weight: 400;
+}
+.contact-where-to-find-us{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.the-patio-p{
+    color: #363636;
+    font-size: 18px;
+    line-height: 1.66;
+    font-family:jost, sans-serif;
+    margin-bottom: 30px;
+}
+.border-style-our-location{
+        border: 0.1px solid #c59764;
+        width: 15%;
+        height: 0.1%;
+        background-color: #c59764;
+        margin: 30px;
+}
+.lakha{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    width: 80%;
+}
+.reservation-underline{
+    border: 1.4px solid ;
+    width: 24%;
+    background-color: #c59764;
+    color: #c59764;
+}
+.contact-us-button{
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #c59764;
+    font-weight: 500;
+    padding: 12px 40px;
+    margin-top:30px;
+    font-family:jost, sans-serif ;
+}
+.contact-us-background{
+    background-color: #a18a7b0d;
+    width: 100%;
+    height: 100%;
+    
+}
+.your-name-input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.216);
+    width: 100%;
+    transition: 0.5s;
+    background-color: transparent;
+}
+.your-name-input:focus{
+   border-bottom: 1px solid rgba(0, 0, 0, 0.999) ;
+}
+.subject-input{
+    width: 100%;
+}
+.your-name-div{
+  justify-content: space-between;
+  display: flex; 
+  align-items: center;
+}
+.contact-textarea{
+    border: none;
+    outline: none;
+    border-bottom:1px solid rgba(0, 0, 0, 0.216) ;
+    transition: 0.5s;
+    background-color: transparent;
+}
+.contact-textarea:focus{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.999) ;
+}
+.touch-p{
+    margin-bottom: 20px;
+    color: #363636;
+    line-height: 1.66;  
+    font-family:jost, sans-serif; 
+    font-size: 16px;   
+    font-weight: 500;
+    text-decoration: NONE;
+}
+.getin-touch-p{
+    color: #c59764;
+    font-weight: 600;
+    font-family: jost, sans-serif;
+    letter-spacing: 0.05em;
+}
+.call-anchor{
+    text-decoration: none;
+    color: #363636;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: jost, sans-serif;
+    margin: 2%;
+}
+.call-anchor:hover{
+    color: #c59764;
+}
+.view-google-map{
+    color: white;
+    background-color: #c59764;
+    border: none;
+    font-family:jost, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 15px 40px;
+    font-size:12px;
+    outline: none;
+}
+.second-div-grid-img{
+    border-top-left-radius: 35vw;
+    border-top-right-radius: 35vw;
+}
+.footer-wrap{
+    background-color: black;
+    padding: 60px;
+}
+.main-footer{
+    justify-content: center;
+    display: flex;
+}
+.icon-anchor{
+    color: black;
+}
+.footer-section-p{
+    color: white;
+    text-align: center;
+}
+.footer-icon{
+    font-size: 30px;
+    color: white;
+    margin: 12px;
+}
+.speacker{
+    display: flex;
+    align-items: center;
+}

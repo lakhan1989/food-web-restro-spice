@@ -1,0 +1,175 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Blog-post{% endblock %}
+{% block body %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blogpost.css' %}">
+{% endblock %}
+
+    <!-- grid section -->
+    <p class="our-menu-para">OUR MENU</p>
+
+    
+    <div class="main-section-div">
+        <div>
+           
+            <div>
+            <p class="aenean">
+               {{ blog.content }}
+            </p>
+            <p class="aenean">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+                elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                viverra nulla ut metus varius laoreet. Quisque rutrum.</p>
+             <img src="{{ blog.featured_image.url }}" alt="">
+            <h3 class="this-elegant">This elegant tart features a savory cream cheese mousse inside a crisp
+                dill-flavored crust, all topped
+                with gleaming slices of smoked salmon.</h3>
+            <p class="aenean">Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+                sit amet adipiscing sem neque sed ipsum.</p>
+            <p class="aenean">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et
+                ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet
+                orci eget eros faucibus tincidunt. </p>
+            </div> 
+
+
+            <hr class="first-sec-hr1">
+            <div class="icon-color-div">
+                <i class="fa-brands fa-facebook-f icon-margin-facebook"></i>
+                <i class="fa-brands fa-twitter icon-margin-twitter"></i>
+                <i class="fa-brands fa-pinterest icon-margin-pinterest"></i>
+            </div>
+                <div class="jamie-milson-maindiv">
+                <div class="jamie-milson-wrap">
+                    <img class="jamie-flower-picture" src="{% static './photos/author-160x160.png' %}" alt="">
+                    <div>
+                        <a class="jamile-milson-a" href="">Jamie Milson</a>
+                        <p class="jamie-p">We see our customers as invited guests to a party, and we are the hosts. It’s
+                            our
+                            job every day to make every important aspect of the customer experience a little bit better.
+                        </p>
+                        <div>
+                            <a class="icon-anchor" href="https://www.facebook.com/"><i
+                                    class="fa-brands fa-facebook-f icon-margin"></i></a>
+                            <a class="icon-anchor" href="https://twitter.com/"><i
+                                    class="fa-brands fa-twitter icon-margin"></i></a>
+                            <a class="icon-anchor" href="https://www.instagram.com/"><i
+                                    class="fa-brands fa-instagram icon-margin"></i></a>
+                            <a class="icon-anchor" href="https://in.pinterest.com/"><i
+                                    class="fa-brands fa-pinterest icon-margin"></i></a>
+                            <a class="icon-anchor" href="https://www.youtube.com/"><i
+                                    class="fa-brands fa-youtube icon-margin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wonderful-maindiv">
+                <div class="next-post"><a class="wonderful-anchor" href="">NEXT POST</a>
+
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </div>
+                <div><a class="wonderful-eating-a" href="">Wonderful Eating experience</a></div>
+
+            </div>
+            <hr class="wonderful-eating-hr">
+            <!-- Leave a replay -->
+            <div class="margin-div">
+                <div>
+                    <h3 class="leave-reply-h3">Leave a Reply</h3>
+                    <p class="your-email">Your email address will not be published. Required fields are marked *</p>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                    <div class="leave-input-type">
+                        <div class="input">
+                            <p class="your-email">Name*</p>
+                            {{ comments_form.name }} 
+                        </div>
+                        <div class="input">
+                            <p class="your-email">Email *</p>
+                            {{ comments_form.email }} 
+                        </div>
+                        <div class="input">
+                            <p class="your-email">Website</p>
+                            {{ comments_form.website }} 
+                        </div>
+                    </div>
+                    <p>Comment *</p> 
+                    {{ comments_form.comment }}
+                    {{ comments_form.comment.errors }}
+                </div>
+            </div>
+ 
+            <div class="savename-checkbox">
+                <input class="your-email" type="checkbox">
+                <p>Save my name, email, and website in this browser for the next time I comment.</p>
+            </div>
+            <div class="post-coment-div">
+                <button type="submit" class="post-coment-button">POST COMMENT</button>
+            </div>
+
+        </form>
+        </div>
+        <!-- grid second div -->
+        <div>
+            <h3 class="mission-hedding">OUR MISSION</h3>
+            <img src="{% static './photos/ig-9-370x370.jpg' %}" alt="">
+            <p class="our-mission-p">We see our customers as invited guests to a party, and we are the hosts. It’s our
+                job every day to make
+                every important aspect of the customer experience a little bit better.</p>
+            <div>
+                <a class="icon-anchor" href="https://www.facebook.com/"><i
+                        class="fa-brands fa-facebook-f icon-margin"></i></a>
+                <a class="icon-anchor" href="https://twitter.com/"><i class="fa-brands fa-twitter icon-margin"></i></a>
+                <a class="icon-anchor" href="https://www.instagram.com/"><i
+                        class="fa-brands fa-instagram icon-margin"></i></a>
+                <a class="icon-anchor" href="https://in.pinterest.com/"><i
+                        class="fa-brands fa-pinterest icon-margin"></i></a>
+                <a class="icon-anchor" href="https://www.youtube.com/"><i
+                        class="fa-brands fa-youtube icon-margin"></i></a>
+            </div>
+            <div class="margin-div">
+                <h3 class="mission-hedding">LATEST NEWS</h3>
+
+                {% for x in latest_news %}
+                <div class="latest-news-sec">
+                    <img class="news-img" src="{{ x.featured_image.url }}" alt="">
+                    <div>
+                        <a class="latest-news-anchor" href="">NEWS,RECIPES</a>
+                        <p class="latest-news-p">{{ x.post_title }}</p>
+                        <p class="latest-news-date">{{ x.created_at }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+               
+            </div>
+
+            <div class="margin-div">
+                <h5 class="mission-hedding">OPENING HOURS</h5>
+                <div class="opening-hours-div">
+                    <p class="margin">Monday - Friday</p>
+                    <p class="margin">09:00 - 22:00</p>
+                </div>
+                <div class="opening-hours-div">
+                    <p class="margin">Saturday</p>
+                    <p class="margin">11:00 - 00:00</p>
+                </div>
+                <div class="opening-hours-div">
+                    <p class="margin">Sunday</p>
+                    <p class="margin">11:00 - 23:00</p>
+                </div>
+                <div class="opening-hours-div">
+                    <p>* Happy hour</p>
+                    <p>17:00 - 21:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
